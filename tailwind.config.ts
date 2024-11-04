@@ -24,6 +24,10 @@ const config: Config = {
           '0%': { transform: 'translateY(-100%)', opacity: '0' },
           '100%': { transform: 'translateY(0)', opacity: '1' },
         },
+        topDown: {
+          '0%': { top: '0', opacity: '1' },
+          '100%': { top: '100%', opacity: '1' },
+        },
         slideInBottom: {
           '0%': { transform: 'translateY(100%)', opacity: '0' },
           '100%': { transform: 'translateY(0)', opacity: '1' },
@@ -33,6 +37,7 @@ const config: Config = {
         slideInRight: 'slideInRight 0.7s ease-out forwards',
         slideInTop: 'slideInTop 0.525s ease-out forwards',
         slideInBottom: 'slideInBottom 0.375s ease-out forwards',
+        topDown: 'topDown 7.5s linear infinite',
       },
     },
   },

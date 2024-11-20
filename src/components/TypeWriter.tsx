@@ -76,9 +76,9 @@ const TypeWriter = () => {
 
         const timeout = setTimeout(() => {
             if(tempSing === "plus") {
-                setLetterCount(prev => tempCount + 1)
+                setLetterCount(tempCount + 1)
             } else {
-                setLetterCount(prev => tempCount - 1)
+                setLetterCount(tempCount - 1)
             }
         }, 300)
 
@@ -88,9 +88,9 @@ const TypeWriter = () => {
 
 
     return (
-        <div className="flex items-center text-[#6a6f8f] text-4xl font-medium gap-1.5 py-1.5">
+        <div className="flex flex-col md:flex-row items-center text-[#6a6f8f] text-2xl md:text-3xl xl:text-4xl font-medium gap-1.5 py-1.5">
             <p>I am proficient in </p>
-            <span className="font-bold" style={{color: `${techs[techCount].color}`}}>{techs[techCount].name.slice(0, letterCount)}</span>
+            <span className="font-bold min-h-9" style={{color: `${techs[techCount].color}`}}>{techs[techCount].name.slice(0, letterCount)}</span>
         </div>
     )
 }

@@ -4,7 +4,6 @@ import { useEffect, useRef, useState } from "react"
 
 const HtmlStringTypeWriter = () => {
     const [letterCount, setLetterCount] = useState(1)
-    const [scroll, setScroll] = useState<number>(0)
     const preRef = useRef<HTMLPreElement | null>(null);
     const divRef = useRef<HTMLDivElement | null>(null)
 
@@ -69,9 +68,10 @@ const HtmlStringTypeWriter = () => {
 
 
     return (
-        <div className='absolute w-full h-full left-0 top-0 z-20 text-2xl text-pink-200 font-medium text-glow overflow-hidden'
+        <div className='absolute w-full h-full left-0 top-0 z-0 text-lg lg:text-xl xl:text-2xl text-pink-200 font-medium lg:text-glow 
+        overflow-hidden opacity-55 lg:opacity-100'
         ref={divRef}>
-            <pre ref={preRef} className="duration-500 min-h-full p-2" style={{transform: `translateY(-${scroll}px)`, transition: 'transform 0.5s'}}>
+            <pre ref={preRef} className="duration-500 min-h-full p-2">
 {htmlString.slice(0, letterCount)}
             </pre>
         </div>

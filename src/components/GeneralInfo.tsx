@@ -19,11 +19,11 @@ const GeneralInfo = () => {
         <div className='flex gap-6 items-center py-4 flex-wrap'>
             <div className='flex gap-1 items-center cursor-pointer'>
                 <ArrowRight /> 
-                <p className='md:text-xl text-lg sm:font-medium'>See my projects</p>
+                <p className='md:text-xl text-lg font-medium'>See my projects</p>
             </div>
-            <div className='flex gap-1 items-center'>
+            <div className='flex gap-1 items-center cursor-pointer'>
                 <ArrowRight /> 
-                <p className='md:text-xl text-lg font-medium cursor-pointer'>More about me</p>
+                <p className='md:text-xl text-lg font-medium'>More about me</p>
             </div>
         </div>
         <div className='w-fit grid grid-flow-col-dense items-center justify-center lg:justify-start gap-2 p-4 absolute 

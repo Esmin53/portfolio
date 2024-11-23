@@ -68,8 +68,8 @@ const HtmlStringTypeWriter = () => {
 
 
     return (
-        <div className='absolute w-full h-full left-0 top-0 z-0 text-lg lg:text-xl xl:text-2xl text-pink-200 font-medium lg:text-glow 
-        overflow-hidden opacity-55 lg:opacity-100'
+        <div className='absolute w-full h-full left-0 top-0 z-0 md:text-lg lg:text-xl xl:text-2xl text-pink-200 text-glow 
+        overflow-hidden '
         ref={divRef}>
             <pre ref={preRef} className="duration-500 min-h-full p-2">
 {htmlString.slice(0, letterCount)}

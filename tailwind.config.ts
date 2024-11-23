@@ -31,6 +31,10 @@ const config: Config = {
         slideInBottom: {
           '0%': { transform: 'translateY(100%)', opacity: '0' },
           '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        slowSpin: {
+          '0%': { transform: 'rotate(8deg)' },
+          '100%': { transform: 'rotate(368deg)' },
         }
       },
       animation: {
@@ -38,6 +42,7 @@ const config: Config = {
         slideInTop: 'slideInTop 0.525s ease-out forwards',
         slideInBottom: 'slideInBottom 0.375s ease-out forwards',
         topDown: 'topDown 7.5s linear infinite',
+        slowSpin: 'slowSpin 13s linear infinite',
       },
     },
   },

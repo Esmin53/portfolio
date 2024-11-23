@@ -31,3 +31,48 @@ body {
 .mirror-horizontal {
   transform: scaleX(-1);
 }
+
+.futuristic-lines {
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(244, 114, 182, 0.6), /* Glowing line color (pink-400 with transparency) */
+    rgba(244, 114, 182, 0.6) 2px, /* Thickness of glowing line */
+    rgba(0, 0, 0, 0.5) 2px, /* Gap between lines */
+    rgba(0, 0, 0, 0.5) 8px /* Thickness of non-glowing area */
+  );
+  animation: glowAnimation 2s linear infinite; /* Add animation */
+}
+
+@keyframes glowAnimation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 100%;
+  }
+}
+
+.icons-container {
+  position: absolute;
+  top: 50%; /* Center in parent */
+  left: 50%; /* Center in parent */
+  transform: translate(-50%, -50%); /* Center transform-origin */
+}
+
+.stayUp {
+  animation: stayUp 13s linear infinite;
+}
+
+.glowing {
+box-shadow: 0.25px -0.5px 7px 2px rgba(249,168,212,0.65)
+}
+
+
+@keyframes stayUp {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(-18deg);
+  }
+}

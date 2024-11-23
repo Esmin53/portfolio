@@ -1,9 +1,11 @@
 import Homepage from "@/components/Homepage";
+import Navbar from "@/components/Navbar";
 import ProjectPreview from "@/components/ProjectPreview";
 
 export default function Home() {
   return (
     <div className="flex flex-col text-[#6a6f8f]">
+      <Navbar />
       <Homepage />
       <div className='w-full flex flex-col'>
         <div className="w-full flex flex-col items-center justify-center gap-2 sm:gap-4 py-4">

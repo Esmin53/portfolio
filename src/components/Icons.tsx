@@ -92,7 +92,9 @@ const Icons = () => {
 
         return () => {
             clearTimeout(timeout)
-            shadowTimeout && clearTimeout(shadowTimeout)
+            if(shadowTimeout) {
+                clearTimeout(shadowTimeout)
+            }
         }
     }, [currentElement])
     

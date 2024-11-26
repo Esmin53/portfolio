@@ -21,7 +21,7 @@ const StatueComponent = () => {
 <HtmlStringTypeWriter />
       <Icons />
       <Image src="/slika.png" alt='Homepage image' fill quality={100} 
-        className={` z-50 max-w-[280px] max-h-[280px] md:max-h-[330px] md:max-w-[330px] lg:max-h-[400px] lg:max-w-[max-w-400px] xl:max-h-[500px] xl:max-w-[500px] 2xl:max-h-[600px] 2xl:max-w-[600px] md:mt-20 xl:mt-0
+        className={` z-50 max-w-[280px] max-h-[280px] md:max-h-[330px] md:max-w-[330px] lg:max-h-[400px] lg:max-w-[max-w-400px] xl:max-h-[500px] xl:max-w-[500px] 2xl:max-h-[600px] 2xl:max-w-[600px] my-auto
           mx-auto
             ${isAnimationFinished ? "animate-slideInTop" : "opacity-0"}`}
         onAnimationEnd={() => setIsSecondAnimationFinished(true)}/>

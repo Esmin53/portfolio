@@ -6,22 +6,24 @@ import TypeWriter from "./TypeWriter"
 const GeneralInfo = () => {
      
     return (
-        <div className='flex-1 flex flex-col gap-1 md:gap-2 z-20 justify-center items-center md:items-start py-2'>
+        <div className='flex-1 flex flex-col gap-1 md:gap-2 z-20 justify-evenly items-center md:items-start py-2
+        md:h-full md:max-h-[500px] lg:max-h-[600px] xl:max-h-[500px] 2xl:max-h-[600px] px-4 md:px-0'>
 
         <div className="flex flex-col w-full">
-        <p className="text-xl sm:text-2xl md:text-3xl font-medium">Hey, my name is</p>
-        <h1 className='text-5xl xl:text-7xl font-semibold relative py-1'>
+            <p className="text-xl sm:text-2xl md:text-3xl font-medium">Hey, my name is</p>
+            <h1 className='text-5xl lg:text-6xl xl:text-7xl font-semibold relative py-1'>
             Esmin Tufekčić.
             </h1>
+            <h1 className='text-3xl sm:text-4xl lg:text-5xl xl:text-5xl font-bold text-start'>Full Stack <span className='text-pink-300 main-text-glow'>Web Developer.</span> </h1>
         </div>
-        <h1 className='text-3xl sm:text-4xl lg:text-5xl xl:text-5xl font-bold text-center md:text-start md:pl-8 lg::pl-12'>Full Stack <span className='text-pink-300 main-text-glow'>Web Developer.</span> </h1>
+
         <TypeWriter />
-        <div className='w-full hidden lg:flex items-center justify-end gap-2 md:gap-4 p-2 md:p-4 relative lg:my-6'>
+        <div className='w-full hidden lg:flex items-center justify-end gap-2 md:gap-4 p-2 md:p-4 relative'>
             <Image src="/github3.png" alt='Github Icon' width={48} height={48} className='cursor-pointer w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12' />
             <Image src="/linkedin.png" alt='Linkedin Icon' width={48} height={48} className='cursor-pointer w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12' />
             <Image src="/gmail.png" alt='Gmail Icon' width={48} height={48} className='cursor-pointer w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12' />
         </div>
-        <div className='flex gap-7 items-center flex-wrap'>
+        <div className='flex gap-y-2 gap-x-7 items-center flex-wrap'>
             <div className="flex gap-1 items-center cursor-pointer group relative">
                 <ArrowRight />
                 <p className="md:text-xl text-lg font-medium">See my projects</p>

@@ -117,11 +117,10 @@ const Icons = () => {
     return (
         <div className="w-[250px] md:w-[300px] lg:w-[380px] xl:w-[460px] aspect-square relative grid grid-cols-1 grid-rows-1 rounded-full z-[51] 
         place-items-center flex-grow-0  -mt-10 md:-mt-[48px] lg:-mt-[64px] xl:-mt-20 2xl:-mt-24 -mr-8 xl:-mr-8 2xl:-mr-10">
-            {currentBoxShadow !== null ? <div className="absolute bottom-3 -right-2 md:right-8 2xl:right-12 w-16 lg:w-24 h-8 lg:h-12 -rotate-[13deg] glowing -skew-x-[44deg]"
+            {currentBoxShadow !== null ? <div className="absolute bottom-3 right-2  md:right-8 2xl:right-12 w-16 lg:w-24 h-8 lg:h-12 -rotate-[13deg] glowing -skew-x-[44deg]"
             style={{
                 boxShadow: techs[currentBoxShadow].boxShadow
             }}> 
-
             </div> : null}
             {currentElement > 0 ? <div className="w-[200px] lg:w-[250px] xl:w-[315px] 2xl:w-[360px] aspect-square animate-slowSpin z-[50] absolute flex-shrink-0 rotate-6">
                 <Image src={techs[0].icon} width={32} height={32} alt="Icon" className="w-8 h-8 md:w-9 md:h-9 xl:w-12 xl:h-12 absolute bottom-0 right-2 stayUp" />

@@ -12,7 +12,7 @@ const StatueComponent = () => {
   
 
     return (
-        <div className='opacity-10 z-10 lg:z-30  md:border border-pink-200 border-opacity-40 shadow-sm rounded  w-full md:w-[330px] h-[300px] md:h-[500px] lg:w-[400px] lg:h-[600px] xl:w-[500px] xl:h-[500px] 2xl:w-[600px] 2xl:h-[600px]
+        <div className='opacity-10 z-10 lg:z-30  md:border border-pink-200 border-opacity-40 shadow-sm rounded h-full  w-full md:w-[330px] max-h-[300px] md:max-h-[500px] lg:w-[400px] lg:max-h-[600px] xl:w-[500px] xl:max-h-[500px] 2xl:w-[600px] 2xl:max-h-[600px]
         relative animate-slideInRight overflow-hidden flex items-center justify-center grainy glowing' 
         onAnimationEnd={() => setIsAnimationFinished(true)}>
             <div className='absolute w-full h-full left-0 top-0 bg-gradient-to-b from-pink-100 to-pink-300 md:bg-pink-300 opacity-25 md:opacity-5 z-10' />

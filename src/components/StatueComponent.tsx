@@ -12,10 +12,10 @@ const StatueComponent = () => {
   
 
     return (
-        <div className='opacity-10 z-10 lg:z-30  md:border border-pink-200 border-opacity-40 shadow-sm rounded h-full  w-full md:w-[330px] max-h-[300px] md:max-h-[500px] lg:w-[400px] lg:max-h-[600px] xl:w-[500px] xl:max-h-[500px] 2xl:w-[600px] 2xl:max-h-[600px]
-        relative animate-slideInRight overflow-hidden flex items-center justify-center grainy glowing' 
+        <div className='opacity-10 z-10 lg:z-30  md:border border-pink-200 border-opacity-40 rounded h-full  w-full md:w-[330px] max-h-[300px] md:max-h-[500px] lg:w-[400px] lg:max-h-[600px] xl:w-[500px] xl:max-h-[600px] 2xl:w-[600px] 2xl:max-h-[800px]
+        relative animate-slideInRight overflow-hidden flex items-center justify-center grainy md:shadow-glowing' 
         onAnimationEnd={() => setIsAnimationFinished(true)}>
-            <div className='absolute w-full h-full left-0 top-0 bg-gradient-to-b from-pink-100 to-pink-300 md:bg-pink-300 opacity-25 md:opacity-5 z-10' />
+            <div className='absolute w-full h-full left-0 top-0 bg-gradient-to-b from-pink-100 to-pink-300 md:bg-pink-300 opacity-20 md:opacity-5 z-10' />
 
 
 <HtmlStringTypeWriter />
@@ -33,7 +33,7 @@ const StatueComponent = () => {
         quality={100}
         className={`absolute w-[200px] h-[200px] lg:w-[250px] lg:h-[250px] xl:w-[300px] xl:h-[300px] 2xl:w-[370px] 2xl:h-[370px] 
            ml-24 md:right-0
-           -bottom-10 md:bottom-12 xl:-bottom-12 2xl:-bottom-14 z-[52]  ${isSecondAnimationFinished ? "animate-slideInBottom" : "opacity-0"}`}
+            -bottom-12 sm:-bottom-10 md:bottom-12 xl:-bottom-9 2xl:bottom-4 z-[52]  ${isSecondAnimationFinished ? "animate-slideInBottom" : "opacity-0"}`}
       />
 
 

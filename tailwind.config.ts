@@ -12,6 +12,9 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      boxShadow: {
+        glowing: "0.25px -0.5px 7px 2px rgba(249,168,212,0.65)"
+      },
       transform: {
         'mirror-horizontal': 'scaleX(-1)',
       },

@@ -1,10 +1,12 @@
 import Homepage from "@/components/Homepage";
 import ProjectPreview from "@/components/ProjectPreview";
+import TechStack from "@/components/TechStack";
 
 export default function Home() {
   return (
     <div className="flex flex-col text-[#6a6f8f]">
       <Homepage />
+      <TechStack />
       <div className='w-full flex flex-col'>
         <div className="w-full flex flex-col items-center justify-center gap-2 sm:gap-4 py-4">
             <h1 className="text-4xl md:text-5xl xl:text-6xl font-semibold lg:ont-bold">My Projects</h1>

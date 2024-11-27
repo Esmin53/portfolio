@@ -88,9 +88,10 @@ const TypeWriter = () => {
 
 
     return (
-        <div className="flex flex-col md:flex-row items-center text-[#6a6f8f] text-2xl lg:text-3xl xl:text-4xl font-medium md:gap-1.5 py-1.5 md:mt-4">
+        <div className="flex flex-row items-start justify-start gap-1 text-[#6a6f8f] text-2xl lg:text-3xl 
+        xl:text-4xl font-medium md:gap-1.5 py-1.5 md:mt-4 w-full">
             <p>I am proficient in </p>
-            <span className="font-bold min-h-9" style={{color: `${techs[techCount].color}`}}>{techs[techCount].name.slice(0, letterCount)}</span>
+            <span className="font-bold" style={{color: `${techs[techCount].color}`}}>{techs[techCount].name.slice(0, letterCount)}</span>
         </div>
     )
 }

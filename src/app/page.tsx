@@ -1,3 +1,4 @@
+import AboutMe from "@/components/AboutMe";
 import Homepage from "@/components/Homepage";
 import ProjectPreview from "@/components/ProjectPreview";
 import TechStack from "@/components/TechStack";
@@ -24,6 +25,7 @@ export default function Home() {
         title="Travelnest" image="travelnest-md3.png" techStack={["nextjs.png", "typescript.png", "postgresql.png", "tailwind.png"]}/>
         </div>
       </div>
+      <AboutMe />
     </div>
   );
 }

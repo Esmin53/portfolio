@@ -22,7 +22,7 @@ const GeneralInfo = () => {
         </div>
 
         <TypeWriter />
-        <div className='w-full flex items-center justify-end gap-2 md:gap-4 p-2 md:p-4 relative'>
+        <div className='w-full hidden lg:flex items-center justify-end gap-2 md:gap-4 p-2 md:p-4 relative'>
             <Image src="/github3.png" alt='Github Icon' width={48} height={48} className='cursor-pointer w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12' />
             <Image src="/linkedin.png" alt='Linkedin Icon' width={48} height={48} className='cursor-pointer w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12' />
             <Image src="/gmail.png" alt='Gmail Icon' width={48} height={48} className='cursor-pointer w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12' />

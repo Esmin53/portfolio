@@ -15,7 +15,7 @@ const TechStack = () => {
                     {TECHS.map((item) => <div key={item.name} className=" grainy h-14 md:h-16 lg:h-20 w-full rounded-lg flex items-center 
                     justify-center gap-1 shadow border-2 border-slate-300 z-30" >
                         <Image src={item.icon} width={36} height={36} alt="Icon" className="" />
-                        <p className={`text-lg lg:text-xl font-medium`}
+                        <p className={`text-lg lg:text-xl font-semibold`}
                         style={{color: item.color}}>{item.name}</p>
                     </div>)}
                 </div>

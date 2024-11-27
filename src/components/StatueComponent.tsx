@@ -15,7 +15,7 @@ const StatueComponent = () => {
         <div className='opacity-10 z-10 lg:z-30  md:border border-pink-200 border-opacity-40 rounded h-full  w-full md:w-[330px] max-h-[300px] md:max-h-[500px] lg:w-[400px] lg:max-h-[600px] xl:w-[500px] xl:max-h-[600px] 2xl:w-[600px] 2xl:max-h-[800px]
         relative animate-slideInRight overflow-hidden flex items-center justify-center grainy md:shadow-glowing' 
         onAnimationEnd={() => setIsAnimationFinished(true)}>
-            <div className='absolute w-full h-full left-0 top-0 bg-gradient-to-b from-pink-100 to-pink-300 md:bg-pink-300 opacity-20 md:opacity-5 z-10' />
+            <div className='absolute w-full h-full left-0 top-0  md:bg-pink-300 opacity-20 md:opacity-5 z-10' />
 
 
 <HtmlStringTypeWriter />

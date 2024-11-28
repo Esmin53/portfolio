@@ -5,8 +5,9 @@ import Image from "next/image";
 const TechStack = () => {
 
     return (
-        <div className="w-full flex flex-col gap-2 items-center justify-center relative py-16 p-4 lg:p-8 xl:p-12 2xl:p-16 overflow-hidden">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold  w-full text-start z-30">My Tech Stack</h1>
+        <div className="w-full flex flex-col gap-2 items-center justify-center relative py-32 md:py-16 px-4 lg:px-8 xl:px-12 2xl:px-16
+        overflow-hidden">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold  w-full text-start z-30 pl-2">My Tech Stack</h1>
             <div className="w-full flex justify-center gap-4 md:p-4 relative z-10 md:px-16 ">
                 <Image src={"/laptop3.png"} width={150} height={150} alt='laptop' className='absolute opacity-50 
                 left-2 2xl:left-12 -bottom-10 -rotate-12 z-20 md:w-[200px] md:h-[200px]' />

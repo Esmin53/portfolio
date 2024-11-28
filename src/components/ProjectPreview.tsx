@@ -27,7 +27,7 @@ const ProjectPreview = ({image, techStack, title, description, className, subTit
                 <div className="h-full w-11/12 md:w-96 xl:w-[26rem] 2xl:w-[32rem] flex-shrink-0 z-10 lg:ml-16 xl:ml-20 2xl:ml-28">
                     <div className="flex flex-col items-center">
                         <div className="w-full aspect-video border-[12px] 2xl:border-[16px] border-slate-500 rounded-lg shadow-sm relative">
-                            <Image src={`/projects/${image}/desktop.png`} fill alt="Title" quality={100} className="objec"/>
+                            <Image src={`/projects/${image}/desktop.PNG`} fill alt="Title" quality={100} className="objec"/>
                         </div>
                         <div className="w-full h-6 bg-slate-400 -translate-y-1.5 rounded-bl-md rounded-br-md" />
                         <div className="w-8 lg:w-10 h-6 lg:h-10 bg-slate-500 border border-slate-600 -translate-y-1.5"/>
@@ -36,11 +36,11 @@ const ProjectPreview = ({image, techStack, title, description, className, subTit
                 </div>
                 <div className="w-44 h-56 lg:w-44 lg:h-52 xl:w-48 2xl:w-52 xl:h-60 2xl:h-64 border-x-8 border-y-8 border-slate-500 rounded-md shadow 
                 flex-shrink-0 z-20 relative lg:absolute">
-                    <Image src={`/projects/${image}/tablet.png`} fill alt="Title" quality={100} className="object-center"/>
+                    <Image src={`/projects/${image}/tablet.PNG`} fill alt="Title" quality={100} className="object-center"/>
                 </div>
                 <div className="w-[110px] h-[202px] lg:w-[100px] lg:h-[180px] xl:w-[120px] xl:h-[212px] border-x-2 border-y-8 border-slate-500 rounded-md shadow flex-shrink-0 z-20 
                  lg:left-48 xl:left-56 relative lg:absolute">
-                    <Image src={`/projects/${image}/mobile.png`} fill alt="Title" quality={100} className="objec"/>
+                    <Image src={`/projects/${image}/mobile.PNG`} fill alt="Title" quality={100} className="objec"/>
                 </div>
             </div>
 

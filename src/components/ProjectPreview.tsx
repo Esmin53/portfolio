@@ -2,6 +2,7 @@
 
 import { Code2, Earth } from "lucide-react"
 import Image from "next/image"
+import { useState } from "react"
 
 interface ProjectProps {
     image: string
@@ -10,9 +11,12 @@ interface ProjectProps {
     subTitle: string
     description: string
     className?: string
+    demo: string
+    git: string 
 }
 
-const ProjectPreview = ({image, techStack, title, description, className, subTitle}: ProjectProps) => {
+const ProjectPreview = ({image, techStack, title, description, className, subTitle, demo, git}: ProjectProps) => {
+    const [showFull, setShowFull] = useState(false)
 
     return (
         <div className={`w-full flex gap-4 xl:gap-6 flex-col ${className ? className : "lg:flex-row"}`}>
@@ -44,28 +48,38 @@ const ProjectPreview = ({image, techStack, title, description, className, subTit
                 </div>
             </div>
 
-            <div className="flex-1 p-2 flex flex-col overflow-y-hidden max-h-96 relative">
+            <div className="flex-1 p-2 flex flex-col overflow-y-hidden  relative">
                 <div className="flex w-full justify-start items-center gap-4">
                     <Image src={`/projects/${image}/logo.ico`} width={38} height={38} alt="Logo"/>
-                    <h1 className="text-4xl lg:text-5xl font-bold">{title}</h1>
+                    <h1 className="text-4xl md:text-5xl font-bold">{title}</h1>
                 </div>
                 <h2 className="text-2xl lg:text-3xl font-medium mt-1">{subTitle}</h2>
 
                 <div className='flex gap-y-2 gap-x-7 items-center flex-wrap my-2.5'>
-                    <div className="flex gap-1 items-center cursor-pointer group relative text-blue-500">
+                    <a className="flex gap-1 items-center cursor-pointer group relative text-blue-500"
+                    href={demo} target="#">
                         <Earth />
                         <p className="md:text-xl text-lg font-medium">Live Demo</p>
                         <span className="absolute left-0 -bottom-1.5 w-0 h-[2px] bg-blue-500 transition-all duration-300 group-hover:w-full" />
-                    </div>
-                    <div className="flex gap-1 items-center cursor-pointer group relative text-gray-900">
+                    </a>
+                    <a className="flex gap-1 items-center cursor-pointer group relative text-gray-900"
+                    href={git} target="#">
                         <Code2 /> 
                         <p className='md:text-xl text-lg font-medium'>Github Repository</p>
                         <span className="absolute left-0 -bottom-1.5 w-0 h-[2px] bg-gray-900 transition-all duration-300 group-hover:w-full" />
-                    </div>
+                    </a>
                 </div>
                 
 
-                <p className="text-base font-medium overflow-y-auto max-h-72 mt-2">{description}</p>
+                <div className="text-base lg:text-lg font-medium mt-2">
+                    <p>{showFull ? description : description.slice(0, 555)}
+    
+                    {description.length > 555 ? <span className="text-blue-500 cursor-pointer font-medium" onClick={() => setShowFull(prev => !prev)}>
+                        {showFull ? "...show less" : "...show more"}
+                    </span> : null}    
+
+                    </p> 
+                </div>
             </div>
         </div>
     )

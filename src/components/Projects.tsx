@@ -1,5 +1,6 @@
 import { Code2, Terminal } from "lucide-react"
 import ProjectPreview from "./ProjectPreview"
+import MobileProjectPreview from "./MobileProjectPreview"
 
 
 const Projects = () => {
@@ -20,6 +21,7 @@ const Projects = () => {
         </div>
 
         <div className="w-full py-6 flex flex-col gap-8 lg:gap-12 mx-auto p-4 sm:p-8 xl:p-12 2xl:p-16">
+        {/* Ecommerce */}
         <ProjectPreview description="E-commerce website built with Next.js and Neon Postgres as the database, using DrizzleORM for efficient data management. It features real-time payment processing via Stripe, an immersive admin dashboard for CRUD operations, and rich data visualizations with Recharts. The product search page is server-side rendered using Next.js server components, ensuring optimized SEO and fast response times for a better user experience."
             title="Cottonwood" subTitle="Ecommerce website."
             image="ecommerce" demo="https://e-commerce-three-theta-97.vercel.app/" git="https://github.com/Esmin53/e-commerce"
@@ -28,6 +30,7 @@ const Projects = () => {
             <div className="w-4/5 h-1 bg-[#6a6f8f] " />
             <Code2 className="text-red-600 w-7 h-7"/>
         </div>
+        {/* Rummy Online */}
         <ProjectPreview description="An online multiplayer Rummy game supporting up to 4 players, built with Next.js and Neon Postgres for database management, using DrizzleORM for efficient data handling. The game leverages WebSockets for real-time updates, providing a fast and immersive player experience."
             title="Rummy Online" subTitle="Online multiplayer game."
             image="rummy" demo="https://remi-two.vercel.app/" git="https://github.com/Esmin53/remi"
@@ -36,6 +39,7 @@ const Projects = () => {
             <Terminal className="text-[#429ccf] w-7 h-7" />
             <div className="w-4/5 h-1 bg-[#6a6f8f] " />
         </div>
+        {/* Travel Nest */}
         <ProjectPreview description="Hotel bookings website built with Next.js and Neon Postgres as the database, using Prizma for efficient data management. It features  an immersive admin dashboard for CRUD operations, and rich data visualizations. The acommodation search page is server-side rendered using Next.js server components, ensuring optimized SEO and fast response times for a better user experience. It provides a rich experience for sellers/hosts and guests with customized homepage displaying accomodations sorted by popularity, rating,
         type of property and landscape, popularity of destination etc.
         Hotel bookings website built with Next.js and Neon Postgres as the database, using Prizma for efficient data management. It features  an immersive admin dashboard for CRUD operations, and rich data visualizations. The acommodation search page is server-side rendered using Next.js server components, ensuring optimized SEO and fast response times for a better user experience. It provides a rich experience for sellers/hosts and guests with customized homepage displaying accomodations sorted by popularity, rating,
@@ -43,6 +47,14 @@ const Projects = () => {
         title="Travelnest" subTitle="Hotel bookings website."
         image="travelnest" demo="https://travel-nest-av13.vercel.app/" git="https://github.com/Esmin53/TravelNest"
         techStack={["nextjs.png", "typescript.png", "postgresql.png", "tailwind.png"]}/>
+        <div className="w-full flex items-center justify-between">
+            <div className="w-4/5 h-1 bg-[#6a6f8f] " />
+            <Code2 className="text-red-600 w-7 h-7"/>
+        </div>
+        {/* E Book Reader */}
+        <MobileProjectPreview title="E Book Reader" subtitle="Mobile app for reading e-books" image="ebookreader" 
+        description="A feature-rich e-book reader app built with React Native, designed for a seamless reading experience. The app allows users to easily add books from their phone storage using SQLite, with options to edit book details and delete books. It supports both dark and light modes for personalized reading preferences, and enables PDF and e-book file reading. Users can search for books, create and manage bookshelves, and add or remove books from shelves. The app remembers the last read page of each book, along with other book-related data, all stored in SQLite. Books can be sorted by title, author, or in alphabetical order (both ascending and descending) for easier navigation."
+        images={["image5.jpg", "image4.jpg", "image3.jpg", "image2.jpg", "image1.jpg"]} git='https://github.com/Esmin53/e-book-reader'/>
         </div>
       </div>
     )

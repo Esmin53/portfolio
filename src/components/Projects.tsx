@@ -55,6 +55,15 @@ const Projects = () => {
         <MobileProjectPreview title="E Book Reader" subtitle="Mobile app for reading e-books" image="ebookreader" 
         description="A feature-rich e-book reader app built with React Native, designed for a seamless reading experience. The app allows users to easily add books from their phone storage using SQLite, with options to edit book details and delete books. It supports both dark and light modes for personalized reading preferences, and enables PDF and e-book file reading. Users can search for books, create and manage bookshelves, and add or remove books from shelves. The app remembers the last read page of each book, along with other book-related data, all stored in SQLite. Books can be sorted by title, author, or in alphabetical order (both ascending and descending) for easier navigation."
         images={["image5.jpg", "image4.jpg", "image3.jpg", "image2.jpg", "image1.jpg"]} git='https://github.com/Esmin53/e-book-reader'/>
+        <div className="w-full flex items-center justify-between">
+            <Terminal className="text-[#429ccf] w-7 h-7" />
+            <div className="w-4/5 h-1 bg-[#6a6f8f] " />
+        </div>
+        <ProjectPreview description="
+Live chat website built with Next.js and Neon Postgres as the database, using Prisma ORM for efficient and scalable data management. It features secure authentication via OAuth and Google Auth, ensuring a seamless login experience for users. The platform integrates Pusher for WebSocket-based real-time messaging and notifications, delivering instant updates and a responsive user experience. "
+            title="Vibe" subTitle="Real time chat website."
+            image="vibee" demo="https://vibee.vercel.app/" git="https://github.com/Esmin53/Vibee"
+            techStack={["nextjs.png", "typescript.png", "postgresql.png", "tailwind.png"]} />
         </div>
       </div>
     )

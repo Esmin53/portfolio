@@ -25,6 +25,10 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Esmin Tufekčić",
   description: "My Portfolio",
+  icons: {
+    icon: "/icon.ico",
+    href: "/icon.ico"
+  }
 };
 
 export default function RootLayout({
@@ -34,6 +38,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+        <head>
+        <link rel='icon' href='/icon.ico' />
+      </head>
       <body
         className={`${inter.className} antialiased grainy`}
       >

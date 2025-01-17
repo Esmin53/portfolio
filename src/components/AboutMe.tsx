@@ -13,11 +13,14 @@ const AboutMe = () => {
             </div>
             <div className="w-full flex flex-col gap-4 py-8 relative px-4 lg:px-8 xl:px-12 2xl:px-16">
             <div className="w-full flex flex-col gap-2 items-center justify-center relative">
-            <div className="flex-1 flex flex-col gap-2">
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold w-full text-start z-30 pl-2">About me</h1>
+            <div className="flex-1 flex flex-col gap-2" id='about-me'>
+                <h1 className="text-5xl lg:text-6xl font-bold w-full text-start z-30 pl-2">About me</h1>
                 <div className="w-3/6 max-w-2xl h-0 shadow-glowing border border-pink-200 border-opacity-60 block mt-3 mr-auto" />
                 <p className="text-lg md:text-xl font-medium my-2">
                     As someone aspiring to pursue a career in development, I am deeply motivated by a steadfast work ethic and a relentless pursuit of exellence. I approcah each new challenge with enthusiasm and determination viewing them as opportunities for growth and learning.
+                    I specialize in modern technologies like TypeScript, JavaScript, React, Next.js, Node.js, MongoDB, PostgreSQL, and Tailwind CSS, delivering optimized performance and seamless user experiences. I&apos;m also skilled in React Native, enabling me to create mobile applications alongside web solutions.
+                    What excites me most is solving real-world challenges through code. Whether it&apos;s crafting a sleek e-commerce platform or engineering a real-time chat application, I thrive on bringing innovative ideas to life and making a tangible impact.<br />
+                    Fluent in both spoken and written English, with strong communication skills.
                 </p>
                 <div className="pl-4 flex flex-col gap-2">
                     <h2 className="text-xl md:text-2xl font-semibold">Education</h2>
@@ -31,14 +34,22 @@ const AboutMe = () => {
                         <Phone className="w-5 h-5 md:w-6 md:h-6"/>
                         <p>062 176 121</p>
                     </div>
-                    <div className="flex gap-2 md:text-xl pl-4">
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=tufekcic.esmin@gmail.com" target="_blank" className="flex gap-2 md:text-xl pl-4">
                         <Mail className="w-5 h-5 md:w-6 md:h-6"/>
                         <p>tufekcic.esmin@gmail.com</p>
-                    </div>
-                    <div className="flex gap-2 md:text-xl pl-4 text-blue-500 cursor-pointer">
+                    </a>
+                    <a href="https://www.linkedin.com/in/esmin-tufek%C4%8Di%C4%87-628130347" target="_blank" className="flex gap-2 md:text-xl pl-4">
+                        <Image src={'/linkedin.png'} alt="Linkedin logo" width={24} height={24}/>
+                        <p>Linkedin</p>
+                    </a>
+                    <a href="https://github.com/Esmin53" target="_blank" className="flex gap-2 md:text-xl pl-4">
+                        <Image src={'/github3.png'} alt="Github logo" width={24} height={24}/>
+                        <p>Github</p>
+                    </a>
+                    <a href="/esmintufekciccv.pdf" className="flex gap-2 md:text-xl pl-4 text-blue-500 cursor-pointer" download="Esmin-Tufekcic-CV.pdf">
                         <LucideFileDown className="w-5 h-5 md:w-6 md:h-6"/>
                         <p>Download my CV</p>
-                    </div>
+                    </a>
                 </div>
             </div>
             </div>
@@ -51,7 +62,7 @@ const AboutMe = () => {
             {/*Tech Stack */}
             <div className="w-full flex flex-col gap-2 items-center justify-center relative
             overflow-hidden pb-16">
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold w-full text-start z-30 pl-2">My Tech Stack</h1>
+                <h1 className="text-5xl lg:text-6xl font-bold w-full text-start z-30 pl-2">My Tech Stack</h1>
                 <div className="w-5/6 max-w-2xl h-0 shadow-glowing border border-pink-200 border-opacity-60 block mt-3 mr-auto" />
                 <div className="w-full flex justify-center gap-4 md:py-2 relative z-10 md:px-16 ">
                     <Image src={"/laptop3.png"} width={150} height={150} alt='laptop' className='absolute opacity-50 

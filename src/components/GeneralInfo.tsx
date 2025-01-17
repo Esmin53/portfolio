@@ -1,9 +1,17 @@
+"use client"
+
 import { ArrowRight } from "lucide-react"
 import Image from "next/image"
 import TypeWriter from "./TypeWriter"
 
-
 const GeneralInfo = () => {
+
+    const handleScroll = (targetId: string) => {
+        const target = document.getElementById(targetId);
+        if (target) {
+          target.scrollIntoView({ behavior: "smooth" });
+        }
+      };
      
     return (
         <div className='flex-1 flex flex-col gap-1 md:gap-2 z-20 justify-evenly items-center md:items-start py-2
@@ -23,17 +31,23 @@ const GeneralInfo = () => {
 
         <TypeWriter />
         <div className='w-full hidden lg:flex items-center justify-end gap-2 md:gap-4 p-2 md:p-4 relative'>
-            <Image src="/github3.png" alt='Github Icon' width={48} height={48} className='cursor-pointer w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12' />
-            <Image src="/linkedin.png" alt='Linkedin Icon' width={48} height={48} className='cursor-pointer w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12' />
-            <Image src="/gmail.png" alt='Gmail Icon' width={48} height={48} className='cursor-pointer w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12' />
+            <a href="https://github.com/Esmin53" target="_blank">
+                <Image src="/github3.png" alt='Github Icon' width={48} height={48} className='cursor-pointer w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12' />
+            </a>
+            <a href="https://www.linkedin.com/in/esmin-tufek%C4%8Di%C4%87-628130347" target="_blank">
+                <Image src="/linkedin.png" alt='Linkedin Icon' width={48} height={48} className='cursor-pointer w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12' />
+            </a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=tufekcic.esmin@gmail.com" target="_blank">
+                <Image src="/gmail.png" alt='Gmail Icon' width={48} height={48} className='cursor-pointer w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12' />
+            </a>
         </div>
         <div className='flex gap-y-2 gap-x-7 items-center flex-wrap'>
-            <div className="flex gap-1 items-center cursor-pointer group relative">
+            <div className="flex gap-1 items-center cursor-pointer group relative" onClick={() => handleScroll('projects')}>
                 <ArrowRight />
                 <p className="md:text-xl text-lg font-medium">See my projects</p>
                 <span className="absolute left-0 -bottom-1.5 w-0 h-[2px] bg-[#6a6f8f] transition-all duration-300 group-hover:w-full" />
             </div>
-            <div className="flex gap-1 items-center cursor-pointer group relative">
+            <div className="flex gap-1 items-center cursor-pointer group relative" onClick={() => handleScroll('about-me')}>
                 <ArrowRight /> 
                 <p className='md:text-xl text-lg font-medium'>More about me</p>
                 <span className="absolute left-0 -bottom-1.5 w-0 h-[2px] bg-[#6a6f8f] transition-all duration-300 group-hover:w-full" />

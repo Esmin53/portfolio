@@ -6,7 +6,7 @@ import MobileProjectPreview from "./MobileProjectPreview"
 const Projects = () => {
 
     return (
-        <div className='w-full flex flex-col'>
+        <div className='w-full flex flex-col' id="projects">
         <div className="w-full flex flex-col items-start justify-start">
             <div className="w-full flex justify-start items-center px-4 lg:px-8 xl:px-12 2xl:px-16 relative">
                 <div className="w-full flex flex-col gap-2 mt-8 mb-4 ">
@@ -14,7 +14,7 @@ const Projects = () => {
                         <h1 className="text-5xl lg:text-6xl font-semibold ">My Projects</h1>
                     </div>
                     <div className="w-5/6 max-w-xl h-0 shadow-glowing border border-pink-200 border-opacity-60 block mt-3 mr-auto" />
-                    <h2 className="text-xl md:text-2xl max-w-2xl">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit doloribus ut numquam ex?</h2>
+                    <h2 className="text-xl md:text-2xl max-w-2xl">A selection of projects I&apos;ve worked on in the past.</h2>
                 </div>
             </div>
 

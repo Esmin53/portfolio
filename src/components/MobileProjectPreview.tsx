@@ -18,7 +18,7 @@ const MobileProjectPreview = ({title, subtitle, description, image, images, git}
 
 
   return (
-    <div className='w-full flex flex-col md:flex-row-reverse gap-4 xl:gap-8 p-2 -mt-6'>
+    <div className='w-full flex flex-col md:flex-row gap-4 xl:gap-8 p-2 -mt-6'>
         <div className='flex gap-4 flex-1 md:max-w-[225px] lg:max-w-[375px] overflow-x-auto no-scrollbar'>
             {images.map((item, i) => <div key={i} className='h-[300px] md:h-[350px] w-[125px] md:w-[150px] border-x-2 border-y-8 border-slate-500 rounded-md shadow flex-shrink-0 z-20 relative'>
                 <Image src={`/projects/${image}/${item}`} fill alt='Project Preview Image' quality={100} className='object-center'/>

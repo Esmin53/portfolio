@@ -42,14 +42,14 @@ const GeneralInfo = () => {
             </a>
         </div>
         <div className='flex gap-y-2 gap-x-7 items-center flex-wrap'>
+            <div className="flex gap-1 items-center cursor-pointer group relative" onClick={() => handleScroll('aboutme')}>
+                <ArrowRight /> 
+                <p className='md:text-xl text-lg font-medium'>More about me</p>
+                <span className="absolute left-0 -bottom-1.5 w-0 h-[2px] bg-[#6a6f8f] transition-all duration-300 group-hover:w-full" />
+            </div>
             <div className="flex gap-1 items-center cursor-pointer group relative" onClick={() => handleScroll('projects')}>
                 <ArrowRight />
                 <p className="md:text-xl text-lg font-medium">See my projects</p>
-                <span className="absolute left-0 -bottom-1.5 w-0 h-[2px] bg-[#6a6f8f] transition-all duration-300 group-hover:w-full" />
-            </div>
-            <div className="flex gap-1 items-center cursor-pointer group relative" onClick={() => handleScroll('about-me')}>
-                <ArrowRight /> 
-                <p className='md:text-xl text-lg font-medium'>More about me</p>
                 <span className="absolute left-0 -bottom-1.5 w-0 h-[2px] bg-[#6a6f8f] transition-all duration-300 group-hover:w-full" />
             </div>
         </div>

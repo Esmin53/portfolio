@@ -5,13 +5,13 @@ import Image from "next/image"
 
 const AboutMe = () => {
     return (
-        <div className="w-full flex flex-col gap-6 md:gap-8 my-8">
+        <div className="w-full flex flex-col gap-6 md:gap-8 my-8" >
             <div className="w-full">
                 <div  className="w-3/4 md:w-4/6 bg-slate-400 h-0.5 ml-auto mb-4"/>
                 <div  className="w-4/6 md:w-3/6 bg-slate-400 h-0.5 mx-auto mb-4"/>
                 <div  className="w-3/4 md:w-4/6 bg-slate-400 h-0.5 mr-auto "/>
             </div>
-            <div className="w-full flex flex-col gap-4 py-8 relative px-4 lg:px-8 xl:px-12 2xl:px-16">
+            <div className="w-full flex flex-col gap-4 py-8 relative px-4 lg:px-8 xl:px-12 2xl:px-16" id="aboutme">
             <div className="w-full flex flex-col gap-2 items-center justify-center relative">
             <div className="flex-1 flex flex-col gap-2" id='about-me'>
                 <h1 className="text-5xl lg:text-6xl font-bold w-full text-start z-30 pl-2">About me</h1>

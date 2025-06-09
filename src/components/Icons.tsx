@@ -115,11 +115,9 @@ const Icons = () => {
     }, [currentBoxShadow])
 
   const [count, setCount] = useState(0);
-  const [worker, setWorker] = useState<Worker | null>(null);
 
   useEffect(() => {
     const newWorker = new Worker(new URL("../lib/timerWorker.js", import.meta.url));
-    setWorker(newWorker);
 
     newWorker.onmessage = (e) => {
       if (e.data === "tick") {

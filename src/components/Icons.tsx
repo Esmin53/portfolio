@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 
 const Icons = () => {
 
-    const [currentElement, setCurrentElement] = useState(0)
+   // const [currentElement, setCurrentElement] = useState(0)
     const [currentBoxShadow, setCurrentBoxShadow] = useState<number | null>(null)
 
     const techs = [
@@ -80,7 +80,7 @@ const Icons = () => {
         },
     ];
 
-    useEffect(() => {
+    /*useEffect(() => {
         if(currentElement > 10) return
         let shadowTimeout = null;
         if(currentBoxShadow === null)  {
@@ -96,23 +96,54 @@ const Icons = () => {
                 clearTimeout(shadowTimeout)
             }
         }
-    }, [currentElement])
+    }, [currentElement])*/
     
     useEffect(() => {
         if(currentBoxShadow === null) return
         
         if(currentBoxShadow === 9) {
-            const timeout = setTimeout(() => setCurrentBoxShadow(0), currentElement > 0 ? 1300 : 1300)
+            const timeout = setTimeout(() => setCurrentBoxShadow(0), count > 0 ? 1300 : 1300)
 
             return () => clearTimeout(timeout)
         } else {
-            const timeout = setTimeout(() => setCurrentBoxShadow(prev => prev! + 1), currentElement > 0 ? 1300 : 1300)
+            const timeout = setTimeout(() => setCurrentBoxShadow(prev => prev! + 1), count > 0 ? 1300 : 1300)
 
             return () => clearTimeout(timeout)
         }
 
 
     }, [currentBoxShadow])
+
+  const [count, setCount] = useState(0);
+  const [worker, setWorker] = useState<Worker | null>(null);
+
+  useEffect(() => {
+    const newWorker = new Worker(new URL("../lib/timerWorker.js", import.meta.url));
+    setWorker(newWorker);
+
+    newWorker.onmessage = (e) => {
+      if (e.data === "tick") {
+        setCount((prev) => {
+          const newCount = prev + 1;
+          if (newCount > 10) {
+            newWorker.postMessage("stop");
+            newWorker.terminate();
+
+          }
+          return newCount;
+        });
+        setCurrentBoxShadow(count)
+        
+      }
+    };
+
+    newWorker.postMessage("start");
+
+    return () => {
+      newWorker.postMessage("stop");
+      newWorker.terminate();
+    };
+  }, []);
 
     return (
         <div className="w-[250px] md:w-[300px] lg:w-[380px] xl:w-[460px] aspect-square relative grid grid-cols-1 grid-rows-1 rounded-full z-[51] 
@@ -122,34 +153,34 @@ const Icons = () => {
                 boxShadow: techs[currentBoxShadow].boxShadow
             }}> 
             </div> : null}
-            {currentElement > 0 ? <div className="w-[200px] lg:w-[250px] xl:w-[315px] 2xl:w-[360px] aspect-square animate-slowSpin z-[50] absolute flex-shrink-0 rotate-6">
+            {count > 0 ? <div className="w-[200px] lg:w-[250px] xl:w-[315px] 2xl:w-[360px] aspect-square animate-slowSpin z-[50] absolute flex-shrink-0 rotate-6">
                 <Image src={techs[0].icon} width={32} height={32} alt="Icon" className="w-8 h-8 md:w-9 md:h-9 xl:w-12 xl:h-12 absolute bottom-0 right-2 stayUp" />
             </div> : null}
-            {currentElement > 1 ? <div className="w-[200px] lg:w-[250px] xl:w-[315px] 2xl:w-[360px] aspect-square animate-slowSpin z-[50] absolute flex-shrink-0">
+            {count > 1 ? <div className="w-[200px] lg:w-[250px] xl:w-[315px] 2xl:w-[360px] aspect-square animate-slowSpin z-[50] absolute flex-shrink-0">
                 <Image src={techs[1].icon} width={32} height={32} alt="Icon" className="w-8 h-8 md:w-9 md:h-9 xl:w-12 xl:h-12 absolute bottom-0 right-2 stayUp" />
             </div> : null}
-            {currentElement > 2 ? <div className="w-[200px] lg:w-[250px] xl:w-[315px] 2xl:w-[360px] aspect-square animate-slowSpin z-[50] absolute flex-shrink-0">
+            {count > 2 ? <div className="w-[200px] lg:w-[250px] xl:w-[315px] 2xl:w-[360px] aspect-square animate-slowSpin z-[50] absolute flex-shrink-0">
                 <Image src={techs[2].icon} width={32} height={32} alt="Icon" className="w-8 h-8 md:w-9 md:h-9 xl:w-12 xl:h-12 absolute bottom-0 right-2 stayUp" />
             </div> : null}
-            {currentElement > 3 ? <div className="w-[200px] lg:w-[250px] xl:w-[315px] 2xl:w-[360px] aspect-square animate-slowSpin z-[50] absolute flex-shrink-0">
+            {count > 3 ? <div className="w-[200px] lg:w-[250px] xl:w-[315px] 2xl:w-[360px] aspect-square animate-slowSpin z-[50] absolute flex-shrink-0">
                 <Image src={techs[3].icon} width={32} height={32} alt="Icon" className="w-8 h-8 md:w-9 md:h-9 xl:w-12 xl:h-12 absolute bottom-0 right-2 stayUp" />
             </div> : null}
-            {currentElement > 4 ? <div className="w-[200px] lg:w-[250px] xl:w-[315px] 2xl:w-[360px] aspect-square animate-slowSpin z-[50] absolute flex-shrink-0">
+            {count > 4 ? <div className="w-[200px] lg:w-[250px] xl:w-[315px] 2xl:w-[360px] aspect-square animate-slowSpin z-[50] absolute flex-shrink-0">
                 <Image src={techs[4].icon} width={32} height={32} alt="Icon" className="w-8 h-8 md:w-9 md:h-9 xl:w-12 xl:h-12 absolute bottom-0 right-2 stayUp" />
             </div> : null}
-            {currentElement > 5 ? <div className="w-[200px] lg:w-[250px] xl:w-[315px] 2xl:w-[360px] aspect-square animate-slowSpin z-[50] absolute flex-shrink-0">
+            {count > 5 ? <div className="w-[200px] lg:w-[250px] xl:w-[315px] 2xl:w-[360px] aspect-square animate-slowSpin z-[50] absolute flex-shrink-0">
                 <Image src={techs[5].icon} width={32} height={32} alt="Icon" className="w-8 h-8 md:w-9 md:h-9 xl:w-12 xl:h-12 absolute bottom-0 right-2 stayUp" />
             </div> : null}
-            {currentElement > 6 ? <div className="w-[200px] lg:w-[250px] xl:w-[315px] 2xl:w-[360px] aspect-square animate-slowSpin z-[50] absolute flex-shrink-0">
+            {count > 6 ? <div className="w-[200px] lg:w-[250px] xl:w-[315px] 2xl:w-[360px] aspect-square animate-slowSpin z-[50] absolute flex-shrink-0">
                 <Image src={techs[6].icon} width={32} height={32} alt="Icon" className="w-8 h-8 md:w-9 md:h-9 xl:w-12 xl:h-12 absolute bottom-0 right-2 stayUp" />
             </div> : null}
-            {currentElement > 7 ? <div className="w-[200px] lg:w-[250px] xl:w-[315px] 2xl:w-[360px] aspect-square animate-slowSpin z-[50] absolute flex-shrink-0">
+            {count > 7 ? <div className="w-[200px] lg:w-[250px] xl:w-[315px] 2xl:w-[360px] aspect-square animate-slowSpin z-[50] absolute flex-shrink-0">
                 <Image src={techs[7].icon} width={32} height={32} alt="Icon" className="w-8 h-8 md:w-9 md:h-9 xl:w-12 xl:h-12 absolute bottom-0 right-2 stayUp" />
             </div> : null}
-            {currentElement > 8 ? <div className="w-[200px] lg:w-[250px] xl:w-[315px] 2xl:w-[360px] aspect-square animate-slowSpin z-[50] absolute flex-shrink-0">
+            {count > 8 ? <div className="w-[200px] lg:w-[250px] xl:w-[315px] 2xl:w-[360px] aspect-square animate-slowSpin z-[50] absolute flex-shrink-0">
                 <Image src={techs[8].icon} width={32} height={32} alt="Icon" className="w-8 h-8 md:w-9 md:h-9 xl:w-12 xl:h-12 absolute bottom-0 right-2 stayUp" />
             </div> : null}
-            {currentElement > 9 ? <div className="w-[200px] lg:w-[250px] xl:w-[315px] 2xl:w-[360px] aspect-square animate-slowSpin z-[50] absolute flex-shrink-0">
+            {count > 9 ? <div className="w-[200px] lg:w-[250px] xl:w-[315px] 2xl:w-[360px] aspect-square animate-slowSpin z-[50] absolute flex-shrink-0">
                 <Image src={techs[9].icon} width={32} height={32} alt="Icon" className="w-8 h-8 md:w-9 md:h-9 xl:w-12 xl:h-12 absolute bottom-0 right-2 stayUp" />
             </div> : null}
         </div>

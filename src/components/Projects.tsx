@@ -1,9 +1,13 @@
-import { Code2, Terminal } from "lucide-react"
+import { Code2, Gamepad2, Terminal } from "lucide-react"
 import ProjectPreview from "./ProjectPreview"
 import MobileProjectPreview from "./MobileProjectPreview"
+import GamePreview from "./GamePreview"
+import BackToTop from "./BackToTop"
 
 
 const Projects = () => {
+
+
 
     return (
         <div className='w-full flex flex-col' id="projects">
@@ -71,12 +75,24 @@ const Projects = () => {
             <div className="w-4/5 h-1 bg-[#6a6f8f] " />
             <Code2 className="text-red-600 w-7 h-7"/>
         </div>
+        {/* Vibe */}
         <ProjectPreview description="
-Live chat website built with Next.js and Neon Postgres as the database, using Prisma ORM for efficient and scalable data management. It features secure authentication via OAuth and Google Auth, ensuring a seamless login experience for users. The platform integrates Pusher for WebSocket-based real-time messaging and notifications, delivering instant updates and a responsive user experience. "
+            Live chat website built with Next.js and Neon Postgres as the database, using Prisma ORM for efficient and scalable data management. It features secure authentication via OAuth and Google Auth, ensuring a seamless login experience for users. The platform integrates Pusher for WebSocket-based real-time messaging and notifications, delivering instant updates and a responsive user experience. "
             title="Vibe" subTitle="Real time chat website."
             image="vibee" demo="https://vibee.vercel.app/" git="https://github.com/Esmin53/Vibee"
             techStack={["nextjs.png", "typescript.png", "postgresql.png", "tailwind.png"]} className="lg:flex-row-reverse"/>
+            <div className="w-full flex items-center justify-between">
+                    <Gamepad2 className="text-[#429ccf] w-7 h-7"/>
+                <div className="w-4/5 h-1 bg-[#6a6f8f] " />
+            </div>
+                { /* Blood and guts */}
+            <GamePreview title="2D Platformer" subtitle="Video Game" image="bloodguts" 
+            description="A 2D platformer video game I made in Godot game engine."
+            images={"image1.jpg"} git='https://github.com/Esmin53/blood-and-guts' demo="https://dsmin.itch.io/blood-guts"/>
+        
         </div>
+
+        <BackToTop />
       </div>
     )
 }

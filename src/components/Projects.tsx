@@ -88,7 +88,7 @@ const Projects = () => {
                 { /* Blood and guts */}
             <GamePreview title="2D Platformer" subtitle="Video Game" image="bloodguts" 
             description="A 2D platformer video game I made in Godot game engine."
-            images={"image1.jpg"} git='https://github.com/Esmin53/blood-and-guts' demo="https://dsmin.itch.io/blood-guts"/>
+            git='https://github.com/Esmin53/blood-and-guts' demo="https://dsmin.itch.io/blood-guts"/>
         
         </div>
 

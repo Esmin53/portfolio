@@ -9,12 +9,11 @@ interface GameProjectPreviewProps {
     subtitle: string
     description: string
     image: string
-    images: string
     git: string
     demo: string
 }
 
-const GamePreview = ({title, subtitle, description, image, images, git, demo}: GameProjectPreviewProps) => {
+const GamePreview = ({title, subtitle, description, image, git, demo}: GameProjectPreviewProps) => {
     const [showFull, setShowFull] = useState(false)
 
   return (

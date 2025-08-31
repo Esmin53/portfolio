@@ -19,7 +19,7 @@ const GamePreview = ({title, subtitle, description, image, git, demo}: GameProje
   return (
     <div className='w-full flex flex-col md:flex-row gap-4 xl:gap-8 p-2 -mt-6'>
         <div className='flex gap-4 w-full aspect-video md:max-w-[24rem] p-0.5 lg:max-w-[30rem] xl:max-w-xl overflow-x-auto no-scrollbar shadow-glowing border border-pink-200 border-opacity-40 rounded relative'>
-            <Image src={`/projects/${image}/image1.png`} fill alt='' />
+            <Image src={`/projects/${image}/image1.PNG`} fill alt='' />
         </div>
         <div className='flex-1 p-2 flex flex-col overflow-y-hidden relative'>
             <div className="flex w-full justify-start items-center gap-4">

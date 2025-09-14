@@ -1,6 +1,7 @@
 import AboutMe from "@/components/AboutMe";
 import Homepage from "@/components/Homepage";
 import Projects from "@/components/Projects";
+import "./globals.css";
 
 export default function Home() {
   return (

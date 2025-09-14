@@ -42,7 +42,7 @@ export default function RootLayout({
         <link rel='icon' href='/icon.ico' />
       </head>
       <body
-        className={`${inter.className} antialiased grainy`}
+        className={`${inter.className} antialiased noisy`}
       >
         {children}
       </body>

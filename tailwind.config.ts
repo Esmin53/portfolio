@@ -25,6 +25,7 @@ const config: Config = {
         },
         slideInTop: {
           '0%': { transform: 'translateY(-100%)', opacity: '0' },
+          '50%': { transform: 'translateY(-100%)', opacity: '0' },
           '100%': { transform: 'translateY(0)', opacity: '1' },
         },
         topDown: {
@@ -42,13 +43,16 @@ const config: Config = {
       },
       animation: {
         slideInRight: 'slideInRight 0.7s ease-out forwards',
-        slideInTop: 'slideInTop 0.525s ease-out forwards',
-        slideInBottom: 'slideInBottom 0.375s ease-out forwards',
+        slideInTop: 'slideInTop 1s ease-out forwards',
+        slideInBottom: 'slideInBottom 0.3s ease-out forwards',
         topDown: 'topDown 7.5s linear infinite',
         slowSpin: 'slowSpin 13s linear infinite',
       },
     },
   },
-  plugins: [],
+  plugins: [
+
+
+  ],
 };
 export default config;

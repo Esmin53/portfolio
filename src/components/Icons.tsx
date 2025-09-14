@@ -99,7 +99,11 @@ const Icons = () => {
     }, [currentElement])*/
     
     useEffect(() => {
-        if(currentBoxShadow === null) return
+        if(currentBoxShadow === null) {
+            const timeout = setTimeout(() => setCurrentBoxShadow(0), count > 0 ? 1300 : 1300)
+
+            return () => clearTimeout(timeout)
+        }
         
         if(currentBoxShadow === 9) {
             const timeout = setTimeout(() => setCurrentBoxShadow(0), count > 0 ? 1300 : 1300)
@@ -130,7 +134,7 @@ const Icons = () => {
           }
           return newCount;
         });
-        setCurrentBoxShadow(count)
+        //setCurrentBoxShadow(count)
         
       }
     };

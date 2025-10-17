@@ -7,6 +7,10 @@
   --foreground: #171717;
 }
 
+body {
+  height: 100%;
+}
+
 .grainy {
   background-color: #f2f2f2;
   background-image: url("https://transparenttextures.com/patterns/batthern.png");
@@ -19,8 +23,20 @@
 }
 
 .noisy {
-  background-color: #fff;
-  background-image: url("/noisy.png");
+  background-color: #f2f1fe;
+  background-image:
+    linear-gradient(135deg, rgba(255,255,255,0.025), rgba(0,0,0,0.01)),
+    url("/skulls.png");
+    background-size: auto; /* or try 'auto' if you want repeating pattern */
+    background-repeat: repeat;
+
+}
+
+.noisy-statue {
+  background-color: #f2f1fe;
+  background-image:
+    linear-gradient(135deg, rgba(255,255,255,0.05), rgba(0,0,0,0.05)),
+    url("/skulls.png");
 }
 
 .text-glow {

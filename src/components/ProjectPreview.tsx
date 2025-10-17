@@ -24,7 +24,7 @@ const ProjectPreview = ({image, techStack, title, description, className, subTit
                 <div className="flex gap-2 w-fit bottom-3 sm:bottom-2 md:-top-2 lg:-top-6 z-40 md:left-[25rem] lg:left-1.5 absolute">
                     {techStack.map((item, i) => (<div key={i} 
                     className="w-10 h-10 sm:w-11 sm:h-11 lg:w-[3.3rem] lg:h-[3.3rem] rounded flex items-center justify-center border-2
-                    border-slate-400 shadow grainy">
+                    border-slate-400 shadow noisy-statue">
                         <Image src={`/${item}`} width={32} height={32} alt="Logo" className="sm:w-9 sm:h-9 lg:w-10 lg:h-10 2xl:w-11 2xl:h-11"/>
                     </div>))}
                 </div>

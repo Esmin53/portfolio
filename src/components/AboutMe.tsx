@@ -5,7 +5,7 @@ import Image from "next/image"
 
 const AboutMe = () => {
     return (
-        <div className="w-full flex flex-col gap-6 md:gap-8 my-8" >
+        <div className="w-full flex flex-col gap-6 md:gap-8 my-8 relative" >
             <div className="w-full">
                 <div  className="w-3/4 md:w-4/6 bg-slate-400 h-0.5 ml-auto mb-4"/>
                 <div  className="w-4/6 md:w-3/6 bg-slate-400 h-0.5 mx-auto mb-4"/>
@@ -69,7 +69,7 @@ const AboutMe = () => {
                     left-2 2xl:left-12 -bottom-10 -rotate-12 z-20 md:w-[200px] md:h-[200px]' />
                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 rounded flex-1 max-w-6xl place-content-center 
                     gap-2 md:gap-4 p-2 md:p-4 ">
-                        {TECHS.map((item) => <div key={item.name} className="cardboard h-14 md:h-16 lg:h-20 w-full rounded-lg flex items-center 
+                        {TECHS.map((item) => <div key={item.name} className="noisy-statue h-14 md:h-16 lg:h-20 w-full rounded-lg flex items-center 
                         justify-center gap-1 shadow border-2 border-slate-300 z-30" >
                             <Image src={item.icon} width={36} height={36} alt="Icon" className="" />
                             <p className={`text-lg lg:text-xl font-semibold`}

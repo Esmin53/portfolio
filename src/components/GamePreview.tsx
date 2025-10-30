@@ -17,7 +17,7 @@ const GamePreview = ({title, subtitle, description, image, git, demo}: GameProje
     const [showFull, setShowFull] = useState(false)
 
   return (
-    <div className='w-full flex flex-col md:flex-row gap-4 xl:gap-8 p-2 -mt-6'>
+    <div className='w-full flex flex-col md:flex-row-reverse gap-4 xl:gap-8 p-2 -mt-6'>
         <div className='flex gap-4 w-full aspect-video md:max-w-[24rem] p-0.5 lg:max-w-[30rem] xl:max-w-xl overflow-x-auto no-scrollbar shadow-glowing border border-pink-200 border-opacity-40 rounded relative'>
             <Image src={`/projects/${image}/image1.PNG`} fill alt='' />
         </div>

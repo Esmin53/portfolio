@@ -9,6 +9,12 @@
 
 body {
   height: 100%;
+    background-color: #f2f1fe;
+  background-image:
+    linear-gradient(135deg, rgba(255,255,255,0.025), rgba(0,0,0,0.01)),
+    url("/skulls.png");
+    background-size: auto;
+    background-repeat: repeat;
 }
 
 .grainy {
@@ -27,7 +33,7 @@ body {
   background-image:
     linear-gradient(135deg, rgba(255,255,255,0.025), rgba(0,0,0,0.01)),
     url("/skulls.png");
-    background-size: auto; /* or try 'auto' if you want repeating pattern */
+    background-size: auto; 
     background-repeat: repeat;
 
 }

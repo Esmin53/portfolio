@@ -20,7 +20,7 @@ const AboutMe = () => {
                     As someone aspiring to pursue a career in development, I am deeply motivated by a steadfast work ethic and a relentless pursuit of exellence. I approcah each new challenge with enthusiasm and determination viewing them as opportunities for growth and learning.
                     I specialize in modern technologies like TypeScript, JavaScript, React, Next.js, Node.js, MongoDB, PostgreSQL, and Tailwind CSS, delivering optimized performance and seamless user experiences. I&apos;m also skilled in React Native, enabling me to create mobile applications alongside web solutions.
                     What excites me most is solving real-world challenges through code. Whether it&apos;s crafting a sleek e-commerce platform or engineering a real-time chat application, I thrive on bringing innovative ideas to life and making a tangible impact.<br />
-                    Fluent in both spoken and written English, with strong communication skills.
+                    Fluent in both spoken and written English, with strong communication skills. In my free time I like making 2d video games in Godot game engine.
                 </p>
                 <div className="pl-4 flex flex-col gap-2">
                     <h2 className="text-xl md:text-2xl font-semibold">Education</h2>

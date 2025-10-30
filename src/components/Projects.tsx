@@ -1,4 +1,4 @@
-import { Code2, Gamepad2, Terminal } from "lucide-react"
+import { Code2, Gamepad2, RadioReceiver, Terminal } from "lucide-react"
 import ProjectPreview from "./ProjectPreview"
 import MobileProjectPreview from "./MobileProjectPreview"
 import GamePreview from "./GamePreview"
@@ -82,10 +82,20 @@ const Projects = () => {
             image="vibee" demo="https://vibee.vercel.app/" git="https://github.com/Esmin53/Vibee"
             techStack={["nextjs.png", "typescript.png", "postgresql.png", "tailwind.png"]} className="lg:flex-row-reverse"/>
             <div className="w-full flex items-center justify-between">
-                    <Gamepad2 className="text-[#429ccf] w-7 h-7"/>
+                    <RadioReceiver className="text-[#429ccf] w-7 h-7"/>
                 <div className="w-4/5 h-1 bg-[#6a6f8f] " />
             </div>
-                { /* Blood and guts */}
+        {/* Sonora */}
+        <ProjectPreview description="Built with React (Vite) and Node.js + Express, the platform uses the Spotify Web API to generate personalized playlist suggestions based on user mood, season, or activity. It is fully responsive and styled with Tailwind CSS, offering both light and dark mode for a consistent, adaptive user experience across all devices."
+        title="Sonora" subTitle="Mood based playlist sugestions."
+        image="sonora" demo="https://sonora-vdjz.onrender.com/" git="https://github.com/Esmin53/Sonora"
+        techStack={["nodejs.png", "react.png", "mongodb.png", "tailwind.png", "typescript.png"]}/>
+
+            <div className="w-full flex items-center justify-between">
+                <div className="w-4/5 h-1 bg-[#6a6f8f] " />
+                <Gamepad2 className="text-red-600 w-7 h-7"/>
+            </div>
+            { /* Blood and guts */}
             <GamePreview title="2D Platformer" subtitle="Video Game" image="bloodguts" 
             description="A 2D platformer video game I made in Godot game engine."
             git='https://github.com/Esmin53/blood-and-guts' demo="https://dsmin.itch.io/blood-guts"/>
